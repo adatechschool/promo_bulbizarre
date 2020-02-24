@@ -1,6 +1,8 @@
 # A quoi sert ce repertoire de travail
 
 Ce dossier regroupe tous les projets sur lesquels la promo Bulbizarre (2019 - 2020) a travaillé.
+Chaque dossier de ce projet représente une séquence de l'année.
+Chaque sous-dossier de la séquence représente le ou les projets d'une équipe.
 
 # Comment participer à ce dossier ?
 
