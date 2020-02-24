@@ -1,3 +1,5 @@
+![Bulbizarre](https://www.eternia-dimension.com/wiki/images/8/8c/Bulbizarre_Artwork.png "Bulbizarre")
+
 # A quoi sert ce repertoire de travail
 
 Ce dossier regroupe tous les projets sur lesquels la promo Bulbizarre (2019 - 2020) a travaillé.
