@@ -1,0 +1,90 @@
+VARIABLES :
+1 variable avec 2 joueurs stockés dans tableau "joueurs" : ["X", "O"]
+une pour le tour
+une pour savoir si jeu fini : boolean
+une qui bouge les pions
+1 qui check le status du jeu
+(?) 1 variable qui stock les prénoms des joueurs sous forme de tableau
+
+FONCTIONS :
+1 qui va chercher qui est le vainqueur
+1 qui gère le match nul
+1 qui gère si le bouton est valide
+1 (main?) qui gère le jeu
+
+
+=> 1 case = 1 bouton, quand on clique dessus, ça affiche rond, ensuite croix.
+Joueur 1 affiche une croix
+Si le tour est impair, on affiche une croix
+
+
+if (nombre%2 == 0)
+   pair
+else
+   impair
+
+
+TRUCS A FAIRE:
+Push
+Faire tout ce qu'on a fait pour chaque bouton
+Fonctionne pour chaque bouton -> savoir sur quel bouton on clic et lui attrbuer une valeur.
+-> Quand on fait console.log de onclick (e), on va dans target et on cherche 'name'. -> Fonction qui nous permet 
+de récupérer ce name.
+
+
+
+
+
+
+
+
+
+
+function main() {
+  var pions = document.querySelectorAll("#Jeu button");
+  var joueurs = ["X", "O"];
+  var tour = 0;
+  var jeuEstFini = false;
+  var afficheur = new Afficheur(document.querySelector("#StatutJeu"));
+  afficheur.sendMessage(
+    "Le jeu peut commencer ! <br /> Joueur " +
+      joueurs[tour] +
+      " c'est votre tour."
+  );
+  for (var i = 0, len = pions.length; i < len; i++) {
+    pions[i].addEventListener("click", function() {
+      if (jeuEstFini) return;
+
+      if (!estValide(this)) {
+        afficheur.sendMessage(
+          "Case occupée ! <br />Joueur " +
+            joueurs[tour] +
+            " c'est toujours à vous !"
+        );
+      } else {
+        setSymbol(this, joueurs[tour]);
+        jeuEstFini = rechercherVainqueur(pions, joueurs, tour);
+
+        if (jeuEstFini) {
+          afficheur.sendMessage(
+            "Le joueur " +
+              joueurs[tour] +
+              ' a gagné ! <br /> <a href="index.html">Rejouer</a>'
+          );
+          return;
+        }
+
+        if (matchNul(pions)) {
+          afficheur.sendMessage(
+            'Match Nul ! <br/> <a href="index.html">Rejouer</a>'
+          );
+          return;
+        }
+
+        tour++;
+        tour = tour % 2;
+        afficheur.sendMessage("Joueur " + joueurs[tour] + " c'est à vous !");
+      }
+    });
+  }
+}
