@@ -53,4 +53,4 @@ git commit -m 'Nom du commit'
 Et enfin, [envoyons ce commit à Github](https://git-scm.com/docs/git-push), pour que toutes les personnes associées au projet puissent y accéder:
 ```
 git push
-```
+``
