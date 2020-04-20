@@ -1,0 +1,1 @@
+function changeBodyBg(color)
