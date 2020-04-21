@@ -1,0 +1,20 @@
+{
+
+  "manifest_version": 2,
+  "name": "Del & Loan",
+  "version": "1.0",
+
+  "description": "Adds a solid red border to all webpages matching mozilla.org.",
+
+  "icons": {
+    "48": "icons/index.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://adatechschool.fr/*"],
+      "js": ["plugin_01.js"]
+    }
+  ]
+
+}
