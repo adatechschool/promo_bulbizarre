@@ -12,7 +12,7 @@
 
   "content_scripts": [
     {
-      "matches": ["*://adatechschool.fr/*"],
+      "matches": ["file:///Users/loando/Desktop/ada/git/promo_bulbizarre/extension-navigateur/2020-04-20/Del_Loan/index.html"],
       "js": ["plugin_01.js"]
     }
   ]
