@@ -2,13 +2,21 @@ function AddZero(num) {
   return (num >= 0 && num < 10) ? "0" + num : num + "";
 }
 
-window.onload = function(){ // permet d'afficher le canvas dés qu'on ouvre le canvas
+function draw(){  // permet d'afficher le canvas dés qu'on ouvre le canvas
 
   var c = document.getElementById("myCanvas");
   var ctx = c.getContext("2d");
   var img = document.getElementById("image");
   ctx.drawImage(img , 0, 0, 880, 580);
 
+
+  // dessein pour la feuille
+
+  ctx.beginPath();
+  ctx.lineWidth = '400';
+  ctx.fillStyle = '#A4A';
+  ctx.arc(150/*y*/,85/*x*/,50 /*taille rayon*/,0,2*Math.PI);
+  ctx.fill();
 
 
     var now = new Date();
@@ -18,9 +26,6 @@ window.onload = function(){ // permet d'afficher le canvas dés qu'on ouvre le c
         AddZero(now.getSeconds())].join(":")].join(" ");
     document.getElementById("Console").innerHTML = strDateTime;
 
-    ctx.beginPath();
-    ctx.arc(150, 106, 50, 0, Math.PIx2, false);
-    ctx.fillStyle = 'rgb(0, 0, 255)';
-    ctx.fill();
-    ctx.closePath();
-};
+
+}
+setInterval(draw,10);

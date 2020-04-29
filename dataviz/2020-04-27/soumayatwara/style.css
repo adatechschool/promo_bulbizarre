@@ -7,11 +7,11 @@ canvas{
   border: 1px solid #d3d3d3;
 }
 
-.disparait{
-  display: none;
-}
+
 
 #image {
   height: 580px;
   width: 880px;
+
+  display: none;
 }
