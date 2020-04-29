@@ -1,5 +1,17 @@
-
-
+body{
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+}
 canvas{
-  border: 1px solid black;
+  border: 1px solid #d3d3d3;
+}
+
+.disparait{
+  display: none;
+}
+
+#image {
+  height: 580px;
+  width: 880px;
 }
