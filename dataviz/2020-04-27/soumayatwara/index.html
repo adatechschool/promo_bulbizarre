@@ -7,11 +7,25 @@
     <title>Arbre</title>
   </head>
   <body>
-    <img id="image" src="unnamed.jpg" alt="tronc d'arbre">
-    <div id = "Console"></div>
-    <canvas id="c1" width="900" height="600"></canvas>
+
+    <!--<img id="image" src="unnamed.jpg" alt="tronc d'arbre">
+    <canvas id="c1" width="900" height="600"></canvas>-->
+
+    <div style="display:none">
+      <img id="image" width="880" height="580" src="unnamed.jpg" alt="tronc">
+    </div>
+
+<canvas id="myCanvas" width="900" height="600" style="border:1px solid #d3d3d3;">
 
 
+<script>
+window.onload = function() {
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+  var img = document.getElementById("image");
+  ctx.drawImage(img , 0, 0, 880, 580);
+}
+</script>
 
   </body>
 </html>

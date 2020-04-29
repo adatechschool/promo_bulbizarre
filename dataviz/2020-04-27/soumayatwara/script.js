@@ -25,10 +25,10 @@ window.onload = function(){ // permet d'afficher le canvas dés qu'on ouvre le c
   image.addEventListener('load', drawingImage, false);
   console.log('fin de la fonction');*/
 
-  var c = document.getElementById("c1");
+  /*var c = document.getElementById("c1");
   var ctx = c.getContext("2d");
   var img = document.getElementById("image");
-  ctx.drawImage(img, 100, 100);
+  ctx.drawImage(img, 100, 100);*/
 
 
   //function heure() {
