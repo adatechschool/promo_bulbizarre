@@ -1,5 +1,10 @@
-body{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+
+
+canvas{
+  border: 1px solid black;
+}
+
+img{
+  width: 880px;
+  height: 580px;
 }
