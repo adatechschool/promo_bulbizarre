@@ -5,14 +5,16 @@ from pystaffo import StaffoAccount
 import requests
 import json
 from getpass import getpass # librairie qui permmet de ne pas afficher les loguin et mot de pass saisie en ligne 11 et 13 dans le shell/
-import hashlib
 
  
 subdomain = 'o-t'
-print("Entrez votre loguin d'authetification")
-username = getpass('') #ici le input est mmodifié par le getpass 
+
+print("Entrez votre login d'authentification")
+username = getpass('') #ici le input est mmodifié par le getpas
 print("Entrez votre mot de passe")
-password = getpass('') # idem commentaoire ligne 11
+password = getpass('') # idem commentaire ligne 11
+
+
 
 account = StaffoAccount(subdomain=subdomain, username=username, password=password)
 
