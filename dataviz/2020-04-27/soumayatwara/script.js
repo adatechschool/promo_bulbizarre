@@ -1,8 +1,8 @@
-function AddZero(num) {
+/*function AddZero(num) {
   return (num >= 0 && num < 10) ? "0" + num : num + "";
-}
+}*/
 
-function draw(){  // permet d'afficher le canvas dés qu'on ouvre le canvas
+window.onload = function(){ // permet d'afficher le canvas dés qu'on ouvre le canvas
 
   var c = document.getElementById("myCanvas");
   var ctx = c.getContext("2d");
@@ -19,13 +19,31 @@ function draw(){  // permet d'afficher le canvas dés qu'on ouvre le canvas
   ctx.fill();
 
 
-    var now = new Date();
+  function heure()
+
+ {
+    var date = new Date();
+    var heure = date.getHours();
+    var minutes = date.getMinutes();
+    var secondes = date.getSeconds();
+    if(minutes < 10)
+         minutes = "0" + minutes;
+
+    if(secondes < 10)
+      secondes = "0" + secondes;
+    return heure + "h" + minutes + "min" + secondes;
+ }
+
+    document.getElementById("lhr").innerHTML = heure();
+
+
+    /*var now = new Date();
     var strDateTime = [
         [AddZero(now.getHours()),
         AddZero(now.getMinutes()),
         AddZero(now.getSeconds())].join(":")].join(" ");
-    document.getElementById("Console").innerHTML = strDateTime;
+    document.getElementById("Console").innerHTML = strDateTime;*/
 
 
-}
-setInterval(draw,10);
+};
+setInterval(window.onload,10);
