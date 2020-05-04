@@ -13,7 +13,7 @@ Chaque sous-dossier de la séquence représente le ou les projets d'une équipe.
 Pour pouvoir utiliser Git, il y a besoin de l'installer.
 En fonction du système sur lequel voe machine est, l'installation sera différente. Voici un lien qui peut vous aider: https://gist.github.com/dgageot/656299
 
-Si vous êtes sous OSX(mac), voici une manière parmis d'autres de faire:
+Si vous êtes sous OSX(mac), voici une manière parmis d'autres de faire :
 - Installez [Brew](https://brew.sh/index_fr) si vous ne l'avez pas
 - Ouvrez un terminal puis lancez la commande d'installation suivante qui permet d'installer le paquet Git:
 ```
