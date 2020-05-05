@@ -1,0 +1,17 @@
+/* {
+    padding: 0;
+    margin: 0;
+}*/
+
+#image {
+    display: none;
+
+}
+
+canvas{
+    width: 900;
+    height: 600;
+    background: #333333;
+    display: block;
+    margin: 0 auto;
+}
