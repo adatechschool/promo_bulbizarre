@@ -1,18 +1,20 @@
 import requests
 from bs4 import BeautifulSoup
+#Beautiful Soup transforme un document HTML complexe en un arbre complexe d’objets Python. Mais vous aurez à manipuler seulement quatre types d’objets : Tag, NavigableString, BeautifulSoup, et Comment.
+
  
-req = requests.get('https://en.wikipedia.org/wiki/Python_(programming_language)')
+req = requests.get('https://o-t.staffomaticapp.com/locations/26605/users)')
 soup = BeautifulSoup(req.text, "lxml")
 
 
 soup.title
-# <title>Python (programming language) - Wikipedia</title>
+# <title></title>>
  
 soup.title.name
 # 'title'
  
 soup.title.string
-# 'Python (programming language) - Wikipedia'
+# 'title'
 
 soup.h1
 # <h1 class="firstHeading" id="firstHeading" lang="en">Python (programming language)</h1>
