@@ -3,7 +3,7 @@ from tkinter import *
 from tkinter.messagebox import * # boîte de dialogue
 
 def Verification():
-    if Motdepasse.get() == 'Lydiajaipasmislebonmdp:wq':#rentre le bon mot de passe pour tester
+    if Motdepasse.get() == 'Lydia':#rentre le bon mot de passe pour tester
         # le mot de passe est bon : on affiche une boîte de dialogue puis on ferme la fenêtre
         showinfo('Résultat','Mot de passe correct.\nAu revoir !')
         Mafenetre.destroy()
@@ -26,18 +26,10 @@ Champ = Entry(Mafenetre, textvariable= Motdepasse, show='*', bg ='bisque', fg='m
 Champ.focus_set()
 Champ.pack(side = LEFT, padx = 5, pady = 5)
 
-def recupere():
-    showinfo("Alerte",entree.get())
-value=StringVar()
-value.set("Valeur")
-entree = Entry(Mafenetre,textvariable=value,width=30)
-entree.pack() 
-
-bouton = Button(Mafenetre,text="Valider",command=recupere)
-bouton.pack()
 
 # Création d'un widget Button (bouton Valider)
 Bouton = Button(Mafenetre, text ='Valider', command = Verification)
 Bouton.pack(side = LEFT, padx = 5, pady = 5)
 
 Mafenetre.mainloop()
+

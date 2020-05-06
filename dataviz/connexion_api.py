@@ -1,21 +1,21 @@
-
-
-
 from pystaffo import StaffoAccount
 import requests
 import json
 from getpass import getpass # librairie qui permmet de ne pas afficher les loguin et mot de pass saisie en ligne 11 et 13 dans le shell/
-#import test.py
-#import verification_mdp.py 
-  
+
+from bs4 import BeautifulSoup
+ 
+soup = BeautifulSoup("<html><p>This is <b>invalid HTML</p></html>", "html.parser") 
 subdomain = 'o-t'
+
+
+
 
 print("Entrez votre login d'authentification")
 username = getpass('') #ici le input est mmodifié par le getpas
-
-
 print("Entrez votre mot de passe")
 password = getpass('') # idem commentaire ligne 11
+
 
 
 account = StaffoAccount(subdomain=subdomain, username=username, password=password)
@@ -30,9 +30,6 @@ account.get_location('Paris')
 
 x = requests.get('https://o-t.staffomaticapp.com')
 print(x.status_code)
-
-
-
 r = requests.get("http://o-t.staffomaticapp.com/")
 print(r.text)
 r = requests.put("http://o-t.staffomaticapp.com/")
@@ -41,3 +38,6 @@ r = requests.patch("http://o-t.staffomaticapp.com/")
 r = requests.post("http://o-t.staffomaticapp.com/")
 r = requests.head("http://o-t.staffomaticapp.com/")
 r = requests.options("http://o-t.staffomaticapp.com/")
+
+req = requests.get('https://https://o-t.staffomaticapp.com/locations/26605/users/Python_(programming_language)')
+soup = BeautifulSoup(req.text, "lxml")
