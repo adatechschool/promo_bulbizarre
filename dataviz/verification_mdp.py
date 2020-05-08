@@ -16,17 +16,20 @@ def Verification():
 Mafenetre = Tk()
 Mafenetre.title('Identification requise')
 
+
 # Création d'un widget Label (texte 'Mot de passe')
 Label1 = Label(Mafenetre, text = 'Mot de passe ')
 Label1.pack(side = LEFT, padx = 5, pady = 5)
 
 # Création d'un widget Entry (champ de saisie)
-Motdepasse= StringVar()
+Motdepasse = StringVar()
+s = Motdepasse.get()
 Champ = Entry(Mafenetre, textvariable= Motdepasse, show='*', bg ='bisque', fg='maroon')
 Champ.focus_set()
 Champ.pack(side = LEFT, padx = 5, pady = 5)
-
-
+valeur = Motdepasse.get()
+print(Motdepasse)
+            
 # Création d'un widget Button (bouton Valider)
 Bouton = Button(Mafenetre, text ='Valider', command = Verification)
 Bouton.pack(side = LEFT, padx = 5, pady = 5)
