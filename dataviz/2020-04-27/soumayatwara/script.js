@@ -42,28 +42,38 @@ let variableAletoire2 = Math.floor(Math.random() * (max - min) ) + min;
 
   function dessinFeuilleVert(){
     //salut c'est florian j'écris n'importe quoi
+
+    let positionFeuille = getRndInteger(95,880)
+    let positionFeuille2 = getRndInteger2(95,380)
+
     ctx.beginPath();
     ctx.lineWidth = '400';
     ctx.fillStyle = '#208129';
-    ctx.arc(positionFeuille/*y*/,positionFeuille/*x*/,15 /*taille rayon*/,0,2*Math.PI);
+    ctx.arc(positionFeuille/*y*/,positionFeuille2/*x*/,15 /*taille rayon*/,0,2*Math.PI);
     ctx.fill();
   }
 
   function dessinFeuilleJaune(){
 
+    let positionFeuille = getRndInteger(95,880)
+    let positionFeuille2 = getRndInteger2(95,380)
+
     ctx.beginPath();
     ctx.lineWidth = '400';
     ctx.fillStyle = '#FCFC29';
-    ctx.arc(positionFeuille/*y*/,positionFeuille/*x*/,15 /*taille rayon*/,0,2*Math.PI);
+    ctx.arc(positionFeuille/*y*/,positionFeuille2/*x*/,15 /*taille rayon*/,0,2*Math.PI);
     ctx.fill();
   }
 
   function dessinFeuilleRouge(){
 
+    let positionFeuille = getRndInteger(95,880)
+    let positionFeuille2 = getRndInteger2(95,380)
+
     ctx.beginPath();
     ctx.lineWidth = '400';
     ctx.fillStyle = '#E61D1D';
-    ctx.arc(positionFeuille/*y*/,positionFeuille/*x*/,15 /*taille rayon*/,0,2*Math.PI);
+    ctx.arc(positionFeuille/*y*/,positionFeuille2/*x*/,15 /*taille rayon*/,0,2*Math.PI);
     ctx.fill();
   }
                                                 // Fonction heure
@@ -74,11 +84,11 @@ let variableAletoire2 = Math.floor(Math.random() * (max - min) ) + min;
     var heure = date.getHours();
     console.log("heure = " + heure) ;
 
-    if(heure > 0 && heure < 6){
+    if(heure >=0 && heure < 6){
       console.log("je dessine une feuille rouge");
       dessinFeuilleRouge();
     }
-    if(heure <= 6 && heure >= 12){
+    if(heure >= 6 && heure <= 12){
         console.log("je dessine une feuille verte");
         dessinFeuilleVert();
     }
