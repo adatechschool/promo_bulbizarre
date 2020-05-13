@@ -1,7 +1,7 @@
 const jsonURL = 'https://raw.githubusercontent.com/Biuni/PokemonGO-Pokedex/master/pokedex.json'
 
 const request = new XMLHttpRequest();
-
+const header = document.querySelector('header');
 request.open('GET', jsonURL);
 
 request.responseType = 'json';
@@ -15,8 +15,8 @@ request.onload = function() {
   //evolutionPokemon(pokemon);
 }
 
-function countPokemon(jsonObj) {
-  //for(i=0; i<length(pokemon[]); i++) {
-   //return i
-  //}
+function countPokemon(pokemon) {
+  let p1 = document.createElement('p');
+  p1.testContent = pokemon;
+  header.appendChild(p1);
 }
