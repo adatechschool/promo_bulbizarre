@@ -9,29 +9,29 @@ request.open('GET', jsonURL);
 request.responseType = 'json';
 request.send();
 request.onload = function() {
-  const pokemon = request.response;
-  console.log(pokemon);
-  console.log(pokemon.pokemon);
-  countPokemon(pokemon);
-  //bigPokemon(pokemon);
-  //sortWeight(pokemon);
+  const jsonObj = request.response;
+  //affiche le nombre de pokemon dans la console
+  console.log(jsonObj.pokemon.length);
+  //affiche les pokemons qui ont un poids suppersieur à 11kg dans la console
+  bigPokemon(jsonObj);
+  //affiche les pokémons par ordre croissant par rapport au poids
+  jsonObj.pokemon.sort(function(a, b) {
+    return a.weight > b.weight;
+  });
+  console.log(jsonObj.pokemon);
+  //affiche les évolutions possible d'un pokemon
   //evolutionPokemon(pokemon);
 }
 
-function countPokemon(pokemon) {
-   for(let i = 0; i < pokemon.length; i++) {
-    console.log(pokemone.name);
-  }
   
-  //let p1 = document.createElement('p');
-  //p1.testContent = pokemon;
-  //header.appendChild(p1);
+function bigPokemon(array) {
+  for (i in array.pokemon) {
+    const pWeight = parseInt(array.pokemon[i].weight, 10);
+    if (pWeight > 10) {
+      console.log(array.pokemon[i].name);
+      console.log(array.pokemon[i].weight);
+    }
+  }
 }
 
-/*
-pokemon.sort(function(a, b) {
-    return a.weight > b.weight;
-});
 
-console.log(data);
-*/
