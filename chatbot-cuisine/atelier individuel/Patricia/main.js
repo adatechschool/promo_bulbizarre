@@ -8,7 +8,7 @@ function chercherInfos() {
 
 			// combien y’a-t-il de pokemon dans les données ?
 			console.log(
-				"il y a " + (infos.pokemon.length - 1) + " Pokemons dans cette array."
+				"il y a " + (infos.pokemon.length) + " Pokemons dans cette array."
 			);
 
 			for (let i = 0; i < infos.pokemon.length; i++) {
