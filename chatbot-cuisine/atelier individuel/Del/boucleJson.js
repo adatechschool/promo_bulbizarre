@@ -41,11 +41,8 @@ function sortWeight(jsonObj) {
 
 function evolutionPokemon(array) {
   for (i in array.pokemon) {
-    console.log(array.pokemon[i].name);
     if(array.pokemon[i].next_evolution != null) {
-      for(j in array.pokemon[i].next_evolution) {
-      console.log(array.pokemon[i].next_evolution[j].name);
-      }
+      console.log(console.log(array.pokemon[i].name + " => " + array.pokemon[i].next_evolution[0].name));
     }
   }
 }
