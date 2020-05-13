@@ -17,12 +17,12 @@ def nbpokemon (data)
 end
 
 def assezlourd (data, limite)
-  ensemble = data['pokemon'].select { |p| p['weight'].to_i >= limite }
+  ensemble = data['pokemon'].select { |p| p['weight'].to_f >= limite }
   return ensemble
 end
 
 def poidscroissant (data)
-  trié = data['pokemon'].sort_by { |p| p['weight'].to_i }
+  trié = data['pokemon'].sort_by { |p| p['weight'].to_f }
   return trié
 end
 
