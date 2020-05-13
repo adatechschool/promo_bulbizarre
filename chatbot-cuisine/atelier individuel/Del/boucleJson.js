@@ -15,5 +15,7 @@ request.onload = function() {
 }
 
 function countPokemon(jsonObj) {
-
+  for(i=0; i<length(pokemon[]); i++) {
+   return i
+  }
 }
