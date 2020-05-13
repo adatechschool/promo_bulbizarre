@@ -21,11 +21,22 @@ def assezlourd (data, limite)
   return ensemble
 end
 
+def poidscroissant (data)
+  trié = data['pokemon'].sort_by { |p| p['weight'].to_i }
+  return trié
+end
+
 nbp = nbpokemon data
+
 plusdixkg = assezlourd data, 10
 nomsdixkg = []
 plusdixkg.each { |p| nomsdixkg << p['name'] }
 
+pc = poidscroissant data
+nomspc = []
+pc.each { |p| nomspc << {name: p['name'], weight: p['weight']} }
+nomspcstr = nomspc.join("\n")
 
 puts "Il y a #{nbp} pokemons"
 puts "Les pokemons de plus de 10 kg sont : #{nomsdixkg.join(', ')}"
+puts "Classés par ordre croissant de poids :\n#{nomspcstr}"
