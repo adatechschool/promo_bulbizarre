@@ -1,0 +1,46 @@
+* {
+	font-family: "Montserrat", Helvetica, sans-serif;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+body {
+	background: #b24592; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		to right,
+		#f15f79,
+		#b24592
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to right,
+		#f15f79,
+		#b24592
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#output {
+	width: auto;
+	height: 40px;
+	align-items: center;
+	justify-content: center;
+}
+
+input {
+	font-size: large;
+	text-align: center;
+	justify-content: center;
+}
+
+button {
+	background: white;
+	border-radius: 100px;
+	padding: 20px 60px;
+	color: #323232;
+	text-decoration: none;
+	font-size: 1.45em;
+	margin: 0 15px;
+}
+
+h1 {
+	color: white;
+}
