@@ -12,11 +12,11 @@ request.onload = function() {
   const jsonObj = request.response;
   //affiche le nombre de pokemon
   console.log(jsonObj.pokemon.length);
-  //affiche les pokemons qui ont un poids suppersieur à 11kg 
+//affiche les pokemons qui ont un poids suppersieur à 11kg 
   bigPokemon(jsonObj);
-  //affiche les pokémons par ordre croissant par rapport au poids
+//affiche les pokémons par ordre croissant par rapport au poids
   sortWeight(jsonObj);
-  //affiche les évolutions possible d'un pokemon
+//affiche les évolutions possible d'un pokemon
   evolutionPokemon(jsonObj);
   
 }
@@ -34,9 +34,12 @@ function bigPokemon(array) {
 
 function sortWeight(jsonObj) {
   let sortW = jsonObj.pokemon.sort(function(a,b) {
-    return a.weught > b.weight;
+    return a.weight > b.weight;
   });
   console.log(sortW);
+  for(i in sortW) {
+    console.log(jsonObj.pokemon[i].name + ", " + jsonObj.pokemon[i].weight);
+  }
 }
 
 function evolutionPokemon(array) {
