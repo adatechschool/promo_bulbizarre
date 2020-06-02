@@ -4,7 +4,6 @@ Caractéristiques possibles de la carte :
 - une grille avec un certain nombre de cases (dit autrement : avec des
   coordonnées X et Y), libres ou occupées (par le personnage, par un item, par
   un obstacle…)
-- des choses cachées
 
 
 Caractéristiques possibles du personnage (incarné par la joueuse ou le joueur) :
@@ -20,8 +19,6 @@ Caractéristiques possibles d'autres objets/obstacles :
 
 Caractéristiques possibles des items :
 - redonne de la vie
-- répare un vélo
-
 
 Scénario : 
 - quelqu'un qui est perdu dans l'internet ? 
