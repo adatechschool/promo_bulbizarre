@@ -17,3 +17,8 @@ void Personnage::function_score()
 {
 
 }
+
+std::string Personnage::getNom()
+{
+  return nom;
+}
