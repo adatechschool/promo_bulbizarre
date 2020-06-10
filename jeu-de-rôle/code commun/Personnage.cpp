@@ -22,3 +22,8 @@ std::string Personnage::getNom()
 {
   return nom;
 }
+
+void Personnage::setNom (std::string nouveauNom)
+{
+  nom = nouveauNom;
+}
