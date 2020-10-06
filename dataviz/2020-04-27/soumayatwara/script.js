@@ -127,3 +127,4 @@ let variableAletoire2 = Math.floor(Math.random() * (max - min) ) + min;
   setInterval(dessinerFeuille,5000);
 
 };
+//lol
